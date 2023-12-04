@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Column A and Rows A1, A2 on Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h3>Table with Manageable Columns and Rows</h3>
+
+        <form id="visibilityForm">
+            <!-- Checkbox for Column A and Rows A1, A2 -->
+            <div class="form-group">
+                <label for="toggleColumnA" class="form-check-label">
+                    <input type="checkbox" class="form-check-input" id="toggleColumnA" onchange="toggleVisibility( 'colA','a1','b1','c1')">
+                    กดเพื่อแสดง/ซ่อน คอลัมน์ A
+                </label>
+            </div>
+        </form>
+
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th id="colA">Column A</th>
+                    <th id="colB">Column B</th>
+                    <th id="colC">Column C</th>
+                    <!-- Add more header columns as needed -->
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr id="rowA1">
+                    <td id="a1">Row A1</td>
+                    <td id="a2">Row B1</td>
+                    <td id="a3">Row C1</td>
+                    <!-- Add more cells as needed -->
+                </tr>
+
+
+                <tr id="rowA2">
+                    <td id="b1">RowA2</td>
+                    <td id="b2">Row B2</td>
+                    <td id="b3">Row C2</td>
+                    <!-- Add more cells as needed -->
+                </tr>
+                <!-- Add more rows as needed -->
+            
+                <tr id="rowA3">
+                      <td id="c1">Row A3</td> 
+                      <td id="c2">Row B3</td> 
+                      <td id="c3">Row C3</td>
+                    <!-- Add more cells as needed -->
+                </tr> 
+
+            </tbody>
+        
+        
+        
+        
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleVisibility(columnId, rowA1Id, rowA2Id,rowA3Id) {
+            var column = document.getElementById(columnId);
+            var rowA1 = document.getElementById(rowA1Id);
+            var rowA2 = document.getElementById(rowA2Id);
+            var rowA3 = document.getElementById(rowA3Id);
+            var checkbox = document.getElementById("toggleColumnA");
+
+            // If the checkbox is checked, display the column and rows; otherwise, hide them
+            column.style.display = checkbox.checked ? "table-cell" : "none";
+            rowA1.style.display = checkbox.checked ? "table-row" : "none";
+            rowA2.style.display = checkbox.checked ? "table-row" : "none";
+            rowA3.style.display = checkbox.checked ? "table-row" : "none";
+        }
+    </script>
+</body>
+</html>

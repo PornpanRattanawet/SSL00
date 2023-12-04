@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles for circular modal */
+    .custom-modal-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 999; /* Ensure modal is on top of other content */
+    }
+
+    .custom-modal {
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #ccc;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* Custom styles for mailbox button */
+    .mailbox-button {
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      color: #333; /* Adjust icon color */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Modal Button -->
+<div class="custom-modal-container">
+  <div class="custom-modal" data-toggle="modal" data-target="#myModal">
+    <!-- Icon representing the mailbox -->
+    <button class="btn mailbox-button">&#9993;</button>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">Mailbox</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Add your modal content here if needed -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap and jQuery script links -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

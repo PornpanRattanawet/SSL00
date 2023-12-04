@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circular Gray Modal Button with Mail Box Icon</title>
+
+
+
+
+
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Include Font Awesome CSS (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+  
+  
+  <style>
+    /* Custom styles for circular gray modal button */
+    .btn-circle-modal {
+      border-radius: 50%;
+      width: 60px; /* Adjust the button size as needed */
+      height: 60px; /* Adjust the button size as needed */
+      padding: 0;
+      font-size: 24px;
+      background-color: #6c757d; /* Gray button background color */
+      color: #fff; /* Text color */
+      border: 1px solid #6c757d; /* Border color */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Circular Button to trigger the gray modal -->
+  <button type="button" class="btn btn-circle-modal" data-toggle="modal" data-target="#contactModal">
+    <i class="fas fa-mail-bulk"></i>
+  </button>
+
+  <!-- Gray Modal with non-circular content -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Feel free to contact us:</p>
+          <ul>
+            <li><i class="fas fa-mail-bulk"></i> Mailbox: example@example.com</li>
+            <li><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</li>
+            <!-- Add more contact information as needed -->
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

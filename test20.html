@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Column A and Rows A1, A2 on Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h3>Table with Manageable Columns and Rows</h3>
+
+        <form id="visibilityForm">
+            <!-- Checkbox for Column A and Rows A1, A2 -->
+            <div class="form-group">
+                <label for="toggleColumnA" class="form-check-label">
+                    <input type="checkbox" class="form-check-input" id="toggleColumnA" onchange="toggleVisibility( 'colA','a1','b1','c1','d1','e1','f1','g1','h1','i1','j1','k1','l1','m1')">
+                    กดเพื่อแสดง/ซ่อน คอลัมน์ A และแถว A1, A2
+                </label>
+            </div>
+        </form>
+
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th id="colA" class="text-center">เลขที่</th>
+                    <th id="colB" class="text-center">สินค้า</th>
+                    <th id="colC" class="text-center">รหัสสินค้า</th>
+                    <th id="colD" class="text-center">จุดรับสินค้า</th>
+                    <th id="colE" class="text-center">จุดส่งสินค้า</th>
+                    <th id="colF" class="text-center">รหัสลูกค้า</th>
+                    <th id="colG" class="text-center">ผู้รับสินค้า/เบอร์โทรศัพท์</th>
+                    <!-- Add more header columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="rowA1">
+                    <td id="a1">1512105928</td>
+                    <td id="a2">น้ำตาลอ้อยธรรมชาติ (NCS)</td>
+                    <td id="a3">Row B1</td>
+                    <!-- Add more cells as needed -->
+                </tr>
+
+
+
+                <tr id="rowA2">
+                    <td id="b1">1412104914</td>
+                    <td id="b2">น้ำตาลทรายขาวชั้นคุณภาพ</td>
+                    <td id="b3">Row C2</td>
+                    <!-- Add more cells as needed -->
+                </tr>
+                <!-- Add more rows as needed -->
+            
+                <tr id="rowA3">
+                      <td id="c1">9012107380</td> 
+                      <td id="c2">น้ำตาลทรายขาวบริสุทธิ์</td> 
+                      <td id="c3">Row C3</td>
+                    <!-- Add more cells as needed -->
+                </tr> 
+
+                <tr id="rowA4">
+                    <td id="d1">9012107380</td> 
+                    <td id="d2">น้ำตาลอ้อยธรรมชาติ (NCS)</td> 
+                    <td id="d3">Row C4</td>
+                  <!-- Add more cells as needed -->
+                  
+                </tr> 
+                <tr id="rowA5">
+                    <td id="e1">9012107382</td> 
+                    <td id="e2">น้ำตาลทรายขาวชั้นคุณภาพ</td> 
+                    <td id="e3">Row C5</td>
+                <!-- Add more cells as needed -->
+                </tr> 
+
+                <tr id="rowA6">
+                    <td id="f1">5012107830</td> 
+                    <td id="f2">น้ำตาลทรายขาวชั้นคุณภาพ</td> 
+                    <td id="f3">Row C6</td>
+                <!-- Add more cells as needed -->
+                </tr> 
+
+                <tr id="rowA7">
+                    <td id="g1">5012107826</td> 
+                    <td id="g2">น้ำตาลทรายขาวชั้นคุณภาพ</td> 
+                    <td id="g3">Row C7</td>
+                <!-- Add more cells as needed -->
+                </tr> 
+
+                <tr id="rowA8">
+                    <td id="h1">1212106781</td> 
+                    <td id="h2">น้ำตาลทรายขาวชั้นคุณภาพ</td> 
+                    <td id="h3">Row C8</td>
+                <!-- Add more cells as needed -->
+
+                <tr id="rowA9">
+                    <td id="i1">1012107745</td> 
+                    <td id="i2">น้ำตาลอ้อยธรรมชาติ (NCS)</td> 
+                    <td id="i3">Row C9</td>
+                <!-- Add more cells as needed -->
+
+                <tr id="rowA10">
+                    <td id="j1">5012107828</td> 
+                    <td id="j2">น้ำตาลทรายขาวบริสุทธิ์</td> 
+                    <td id="j3">Row C10</td>
+                <!-- Add more cells as needed -->
+
+                <tr id="rowA11">
+                    <td id="k1">5012107828</td> 
+                    <td id="k2">น้ำตาลทรายขาวบริสุทธิ์</td> 
+                    <td id="k3">Row C11</td>
+                <!-- Add more cells as needed -->
+                
+                <tr id="rowA12">
+                    <td id="l1">1212106783</td> 
+                    <td id="l2">น้ำตาลทรายขาวบริสุทธิ์</td> 
+                    <td id="l3">Row C12</td>
+                <!-- Add more cells as needed -->
+
+                <tr id="rowA13">
+                    <td id="m1">9012107384</td> 
+                    <td id="m2">น้ำตาลทรายขาวบริสุทธิ์</td> 
+                    <td id="m3">Row C13</td>
+                <!-- Add more cells as needed -->
+
+
+            </tr> 
+            </tbody>
+        
+        
+        
+        
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleVisibility(columnId, rowA1Id, rowA2Id,rowA3Id,rowA4Id, rowA5Id,rowA6Id,rowA7Id, rowA8Id,rowA9Id,rowA10Id, rowA11Id,rowA12Id,rowA13Id) {
+            var column = document.getElementById(columnId);
+            var rowA1 = document.getElementById(rowA1Id);
+            var rowA2 = document.getElementById(rowA2Id);
+            var rowA3 = document.getElementById(rowA3Id);
+            var rowA4 = document.getElementById(rowA4Id);
+            var rowA5 = document.getElementById(rowA5Id);
+            var rowA6 = document.getElementById(rowA6Id);
+            var rowA7 = document.getElementById(rowA7Id);
+            var rowA8 = document.getElementById(rowA8Id);
+            var rowA9 = document.getElementById(rowA9Id);
+            var rowA10 = document.getElementById(rowA10Id);
+            var rowA11 = document.getElementById(rowA11Id);
+            var rowA12 = document.getElementById(rowA12Id);
+            var rowA13 = document.getElementById(rowA13Id);
+            var checkbox = document.getElementById("toggleColumnA");
+
+            // If the checkbox is checked, display the column and rows; otherwise, hide them
+            column.style.display = checkbox.checked ? "table-cell" : "none";
+            rowA1.style.display = checkbox.checked ? "table-row" : "none";
+            rowA2.style.display = checkbox.checked ? "table-row" : "none";
+            rowA3.style.display = checkbox.checked ? "table-row" : "none";
+            rowA4.style.display = checkbox.checked ? "table-row" : "none";
+            rowA5.style.display = checkbox.checked ? "table-row" : "none";
+            rowA6.style.display = checkbox.checked ? "table-row" : "none";
+            rowA7.style.display = checkbox.checked ? "table-row" : "none";
+            rowA8.style.display = checkbox.checked ? "table-row" : "none";
+            rowA9.style.display = checkbox.checked ? "table-row" : "none";
+            rowA10.style.display = checkbox.checked ? "table-row" : "none";
+            rowA11.style.display = checkbox.checked ? "table-row" : "none";
+            rowA12.style.display = checkbox.checked ? "table-row" : "none";
+            rowA13.style.display = checkbox.checked ? "table-row" : "none";
+        }
+    </script>
+</body>
+</html>

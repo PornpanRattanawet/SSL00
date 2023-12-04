@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Tables with Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Add your custom styles here if needed */
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h3>Table Visibility</h3>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" onclick="toggleTableVisibility('table1')">Show Table 1</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="toggleTableVisibility('table2')">Show Table 2</a>
+            <!-- Add more items for additional tables -->
+        </div>
+
+        <table id="table1" class="table table-bordered mt-3" style="display:none;">
+            <!-- Table 1 content goes here -->
+            <thead>
+                <tr>
+                    <th>Table 1, Header 1</th>
+                    <th>Table 1, Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table 1, Row 1, Cell 1</td>
+                    <td>Table 1, Row 1, Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Table 1, Row 2, Cell 1</td>
+                    <td>Table 1, Row 2, Cell 2</td>
+                </tr>
+                <!-- Add more rows and cells as needed -->
+            </tbody>
+        </table>
+
+        <table id="table2" class="table table-bordered mt-3" style="display:none;">
+            <!-- Table 2 content goes here -->
+            <thead>
+                <tr>
+                    <th>Table 2, Header 1</th>
+                    <th>Table 2, Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table 2, Row 1, Cell 1</td>
+                    <td>Table 2, Row 1, Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Table 2, Row 2, Cell 1</td>
+                    <td>Table 2, Row 2, Cell 2</td>
+                </tr>
+                <!-- Add more rows and cells as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleTableVisibility(tableId) {
+            var table = document.getElementById(tableId);
+
+            // If the table is visible, hide it; otherwise, show it
+            table.style.display = (table.style.display === "none") ? "table" : "none";
+        }
+    </script>
+</body>
+</html>
